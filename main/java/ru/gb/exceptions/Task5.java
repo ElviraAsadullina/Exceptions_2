@@ -19,10 +19,10 @@ public class Task5 {
         int[][] array = new int[i][j];
         for (i = 0; i < array.length; i++) {
             for (j = 0; j < array[i].length; j++) {
-                if (i < 1) {
-                    array[i][j] = 0;
-                } else if (j == 0 || i == j) {
+                if (j == 0 || i == j) {
                     array[i][j] = 4;
+                } else if (i < 1) {
+                    array[i][j] = 0;
                 } else {
                     array[i][j] = array[i - 1][j] + array[i - 1][j - 1];
                 }
